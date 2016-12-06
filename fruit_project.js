@@ -12,7 +12,7 @@ provider.registerService("orion.project.handler", {
 		var url = removeUserInformation(params.url);
         console.log(params);
 		return {
-            ContentLocation: "/"//projectMetadata.WorkspaceLocation
+            ContentLocation: "/file/vekaz-OrionContent"//projectMetadata.WorkspaceLocation
             
         }
 	}
