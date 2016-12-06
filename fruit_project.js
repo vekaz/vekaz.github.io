@@ -30,7 +30,10 @@ provider.registerService("orion.project.handler", {
 },
 {
 		id: "orion.fruit.projecthandler",
-		type: "fruit"    
+		type: "fruit",
+        addParameters: [{id: "url", type: "text", name: "URL"}],
+        addProjectName: "fruit",
+        addProjectTooltip: "..create a new fruit project.."
 });
         
 function removeUserInformation(url){
