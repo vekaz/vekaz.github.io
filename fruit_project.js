@@ -1,6 +1,6 @@
-define(["orion/plugin", "orion/serviceregistry"], 
+define(["orion/plugin", "orion/serviceregistry", "orion/fileClient"], 
        
-       function(PluginProvider, mServiceRegistry) {
+       function(PluginProvider, mServiceRegistry, mFileClient) {
            var serviceRegistry = new mServiceRegistry.ServiceRegistry();
            
            var headers = { name: "Fruit Project Plugin", version: "1.0", description: "Plugin providing support for Fruit projects." };
@@ -13,7 +13,7 @@ define(["orion/plugin", "orion/serviceregistry"],
                },
                
                initProject: function(params, projectMetadata){
-                   var fileClient = serviceRegistry.getService("orion.core.file.client");
+                   var fileClient = new mFileClient();
                    var url = removeUserInformation(params.url);
                    fileClient.createProject("/file/vekaz-OrionContent", params.url, null, true);
                    
