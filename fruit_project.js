@@ -30,7 +30,7 @@ provider.registerService("orion.project.handler", {
 });
         
 function removeUserInformation(url){
-	if(url.indexOf("@")>0 && url.indexOf("ssh://")>=0){
+	if(url && url.indexOf("@")>0 && url.indexOf("ssh://")>=0){
 		return url.substring(0, url.indexOf("ssh://") + 6) + url.substring(url.indexOf("@")+1);
 	}
 	return url;
