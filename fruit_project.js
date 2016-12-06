@@ -13,7 +13,15 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient", "orion/xhr"
                },
                
                initProject: function(params, projectMetadata){
-                   var request = xhr("GET", "http://localhost:8080/workspace").then(
+                   var request = xhr("GET", "http://localhost:8080/workspace", 
+                                     {
+                                         headers: {
+                                             "Orion-Version": "1"
+                                         },
+                                     timeout: 60000
+                                     }
+                                     
+                   ).then(
                        function(xhrResult) {
                            console.log("Got response: " + xhrResult.response);
                        },
