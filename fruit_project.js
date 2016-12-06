@@ -1,8 +1,8 @@
 //var serviceRegistry = new orion.serviceRegistry.ServiceRegistry();
 //var fileClient = serviceRegistry.getService("orion.core.file.client");
-define(["orion/plugin"], 
+define(["orion/plugin", "orion/Deferred"], 
        
-       function(PluginProvider) {
+       function(PluginProvider, Deffered) {
             var headers = { name: "Fruit Project Plugin", version: "1.0", description: "Plugin providing support for Fruit projects." };
             var provider = new PluginProvider(headers);
 
