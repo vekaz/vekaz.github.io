@@ -16,7 +16,7 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient"],
                    // drugi parametar je 'filter'...
                    var fileClient = new mFileClient.FileClient(serviceRegistry, null);
                    var url = removeUserInformation(params.url);
-                   fileClient.createProject("/file/vekaz-OrionContent", params.url, null, true);
+                   fileClient.createProject("/vekaz-OrionContent", params.url, null, true);
                    
                    return {
                        ContentLocation: "/file/vekaz-OrionContent"//projectMetadata.WorkspaceLocation
