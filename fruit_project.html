@@ -5,10 +5,14 @@
 	<meta name="copyright" content="Copyright (c) IBM Corporation and others 2011." >
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!-- <script src="plugin.js"></script> -->
-	<script src="/lib/require.min.js"></script>
+	<script src="/requirejs/require.min.js"></script>
 	<!-- <script src="fruit_project.js"></script>   -->
 	<script>		        
-        require(["fruit_project"]);
+        require(["../../orion/require-config.js"], function(config){
+			//require.config({baseUrl: "../.."});
+			require.config({baseUrl: "/"});
+			require(["fruit_project"], null, config.errback);
+		});
 	</script>
 </head>
 <body>
