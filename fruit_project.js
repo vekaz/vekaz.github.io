@@ -13,7 +13,7 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient", "orion/xhr"
                },
                
                initProject: function(params, projectMetadata){
-                   var request = xhr("GET", "https://localhost:8443/workspace").then(
+                   var request = xhr("GET", "http://localhost:8080/workspace").then(
                        function(xhrResult) {
                            console.log("Got response: " + xhrResult.response);
                        },
