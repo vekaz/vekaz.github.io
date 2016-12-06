@@ -13,7 +13,7 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient"],
                },
                
                initProject: function(params, projectMetadata){
-                   var fileClient = new mFileClient();
+                   var fileClient = new mFileClient.FileClient();
                    var url = removeUserInformation(params.url);
                    fileClient.createProject("/file/vekaz-OrionContent", params.url, null, true);
                    
