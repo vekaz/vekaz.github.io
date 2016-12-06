@@ -4,7 +4,7 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient"],
            var serviceRegistry = new mServiceRegistry.ServiceRegistry();
            
            var headers = { name: "Fruit Project Plugin", version: "1.0", description: "Plugin providing support for Fruit projects." };
-           var provider = new PluginProvider(headers, serviceRegistry);
+           var provider = new PluginProvider(headers);
            
            
            provider.registerService("orion.project.handler", {
