@@ -1,4 +1,14 @@
-- folder 'orion' sadrzi sve potrebne skripte, osim require.js koji je u 'requirejs' folderu,
-- orion folder skinut sa git-a:
+- folder 'orion' sadrzi potrebne skripte
+- orion skinut sa git-a:
   git clone http://git.eclipse.org/gitroot/orion/org.eclipse.orion.client.git
+  
+  subfolder: /home/mooyaga2/Downloads/orion_src/org.eclipse.orion.client/bundles/org.eclipse.orion.client.core/web/
+  
   (pronadjen uz mnogo patnje, pa zato zapisujem)
+
+  
+- fileClient.js zahtijeva nekakve messages (za i18n). Ti messages se nalaze u drugom folderu u src:
+  /home/mooyaga2/Downloads/orion_src/org.eclipse.orion.client/bundles/org.eclipse.orion.client.ui/web/orion/navigate/
+  (nout da ovo nije isti folder kao gore - nije core nego ui)
+  
+  
