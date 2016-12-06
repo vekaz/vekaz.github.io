@@ -13,10 +13,12 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient"],
                },
                
                initProject: function(params, projectMetadata){
+                   var fileServices = serviceRegistry.getServiceReferences("orion.core.file");
+                   var leSvc = fileServices[0];
                    // drugi parametar je 'filter'...
-                   var fileClient = new mFileClient.FileClient(serviceRegistry, null);
-                   var url = removeUserInformation(params.url);
-                   fileClient.createProject("/workspace/vekaz-OrionContent", params.url, null, true);
+                   //var fileClient = new mFileClient.FileClient(serviceRegistry, null);
+                   //var url = removeUserInformation(params.url);
+                   //fileClient.createProject("/workspace/vekaz-OrionContent", params.url, null, true);
                    
                    return {
                        ContentLocation: "/workspace/vekaz-OrionContent"//projectMetadata.WorkspaceLocation
