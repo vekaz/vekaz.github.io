@@ -14,11 +14,14 @@ define(["orion/plugin", "orion/serviceregistry", "orion/fileClient", "orion/xhr"
                
                initProject: function(params, projectMetadata){
                    var request = xhr("GET","/workspace").then(
-                       function(result){
-                           console.log(result);                           
-                       }
-                       
-                   )
+                       function(xhrResult) {
+                           console.log("Got response: " + xhrResult.response);
+                       },
+                       function(xhrResult) {
+                           console.log("An error occurred: " + xhrResult.error);
+                       });
+                   
+                   
                    
                    /*
                     *                    var fileServices = serviceRegistry.getServiceReferences("orion.core.file");
