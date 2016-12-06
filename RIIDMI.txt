@@ -1,0 +1,4 @@
+- folder 'orion' sadrzi sve potrebne skripte, osim require.js koji je u 'requirejs' folderu,
+- orion folder skinut sa git-a:
+  git clone http://git.eclipse.org/gitroot/orion/org.eclipse.orion.client.git
+  (pronadjen uz mnogo patnje, pa zato zapisujem)
