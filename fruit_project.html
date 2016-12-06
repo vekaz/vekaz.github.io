@@ -7,7 +7,7 @@
 	<script src="require/require.min.js"></script>
 	<script>
 		/*eslint-env browser, amd*/	
-		require(["../../orion/require-config.js"], function(config){
+		require(["orion/require-config.js"], function(config){
 			require.config({baseUrl: "../.."});
 			require(["fruit_project"], null, config.errback);
 		});
