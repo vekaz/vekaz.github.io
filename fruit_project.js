@@ -12,7 +12,7 @@ provider.registerService("orion.project.handler", {
 		var url = removeUserInformation(params.url);
         console.log(params);
 		return {
-            ContentLocation: projectMetadata.WorkspaceLocation + "test_fruit_project"
+            ContentLocation: "/"//projectMetadata.WorkspaceLocation
             
         }
 	}
@@ -27,6 +27,10 @@ provider.registerService("orion.project.handler", {
 		return this._cloneRepository(url, params, projectMetadata.WorkspaceLocation, true);
 	},
     */
+},
+{
+		id: "orion.fruit.projecthandler",
+		type: "fruit"    
 });
         
 function removeUserInformation(url){
