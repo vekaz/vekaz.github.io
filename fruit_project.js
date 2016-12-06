@@ -7,6 +7,16 @@ provider.registerService("orion.project.handler", {
     paramsToDependencyDescription: function(params){
 		return {Type: "fruit", Location: removeUserInformation(params.url)};
 	},
+    
+    initProject: function(params, projectMetadata){
+		var url = removeUserInformation(params.url);
+        console.log(params);
+		return {
+            ContentLocation: projectMetadata.WorkspaceLocation + "test_fruit_project"
+            
+        }
+	}
+	
    /* 
     initDependency: function(dependency, params, projectMetadata){
 		var url = removeUserInformation(dependency.Location || params.url);
